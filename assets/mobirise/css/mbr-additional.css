@@ -194,7 +194,7 @@ body {
 .btn-secondary.focus,
 .btn-secondary.active {
   color: inherit;
-  background-color: #ffffff !important;
+  background-color: #f8f9fa !important;
   border-color: #ffffff !important;
   box-shadow: none;
 }
