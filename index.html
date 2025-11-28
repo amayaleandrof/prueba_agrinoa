@@ -46,144 +46,176 @@
   </div>
 </section>
 
-<section data-bs-version="5.1" class="video04 cid-uZ3L9AXTvc" id="video04-l">
+<section data-bs-version="5.1" class="video04 slider3 cid-v3S7rCCeyj" id="video04-l">
 
-<!-- Barra de menú entre secciones -->
-<nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
-  <div class="container-fluid justify-content-between align-items-center">
-    
-    <!-- Logo oculto inicialmente -->
-    <a href="#inicio" class="navbar-logo">
-      <img src="assets/images/logo-agrinoa-rgb.png" alt="Logo" />
-    </a>
+  <!-- Barra de menú entre secciones -->
+  <nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container-fluid justify-content-between align-items-center">
+      
+      <!-- Logo oculto inicialmente -->
+      <a href="#inicio" class="navbar-logo">
+        <img src="assets/images/logo-agrinoa-rgb.png" alt="Logo" />
+      </a>
 
-    <!-- Productos a la izquierda -->
-    <a class="nav-link fw-medium me-4 productos-link" href="#productos">Productos</a>
+      <!-- Productos a la izquierda -->
+      <a class="nav-link fw-medium me-4 productos-link" href="#productos">Productos</a>
 
-    <!-- Botones centrales -->
-    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 central-menu">
-      <li class="nav-item"><a class="nav-link fw-bold" href="#article12-4">Trayectoria</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#article12-a">Servicio</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#article07-9">Calidad</a></li>
-      <li class="nav-item"><a class="nav-link fw-bold" href="#article12-b">Solvencia</a></li>
-    </ul>
+      <!-- Botones centrales -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 central-menu">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#article12-4">Trayectoria</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#article12-a">Servicio</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#article07-9">Calidad</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#article12-b">Solvencia</a></li>
+      </ul>
 
-    <!-- Idiomas a la derecha -->
-    <div class="lang-switch d-flex align-items-center ms-4">
-      <a href="#" class="lang-link">ENG</a>
-      <span class="mx-1">|</span>
-      <a href="#" class="lang-link">ESP</a>
+      <!-- Idiomas a la derecha -->
+      <div class="lang-switch d-flex align-items-center ms-4">
+        <a href="#" class="lang-link">ENG</a>
+        <span class="mx-1">|</span>
+        <a href="#" class="lang-link">ESP</a>
+      </div>
+      
     </div>
-    
-  </div>
-</nav>
+  </nav>
 
-<!-- CSS -->
-<style>
-/* Fuente Roboto para navbar */
-#custom-navbar, 
-#custom-navbar .nav-link, 
-#custom-navbar .lang-link {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Barra base entre secciones */
-#custom-navbar {
-  position: relative;
-  z-index: 1000;
-  transition: all 0.3s ease, background-color 0.3s ease;
-  background-color: rgba(255,255,255,1); /* inicial opacidad total */
-}
-
-/* Clase sticky al scrollear */
-#custom-navbar.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background-color: rgba(255,255,255,0.9); /* opacidad al scrollear */
-}
-
-/* Logo oculto inicialmente */
-.navbar-logo {
-  display: none;
-  align-items: center;
-}
-
-.navbar-logo img {
-  height: 40px;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-/* Cuando la barra es sticky, aparece */
-#custom-navbar.sticky .navbar-logo {
-  display: flex;
-}
-
-#custom-navbar.sticky .navbar-logo img {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Menu central */
-.central-menu {
-  display: flex;
-  gap: 15px; /* más juntas */
-}
-.central-menu .nav-link {
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Separación de Productos */
-#custom-navbar .productos-link {
-  margin-right: 20px; /* más cerca del centro */
-  margin-left: 20px;  /* separada de margen */
-}
-
-/* Separación de ENG|ESP */
-.lang-switch {
-  margin-left: 20px; /* más cerca del centro y margen */
-  margin-right: 20px;
-}
-</style>
-
-<!-- Script sticky -->
-<script>
-window.addEventListener("scroll", function() {
-  const navbar = document.getElementById("custom-navbar");
-  const section = document.querySelector("#image03-k"); // Sección 1
-  const triggerPoint = section.offsetHeight; // cuando pasás la primera sección
-  if (window.scrollY > triggerPoint) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
+  <!-- CSS -->
+  <style>
+  /* Fuente Roboto para navbar */
+  #custom-navbar, 
+  #custom-navbar .nav-link, 
+  #custom-navbar .lang-link {
+    font-family: 'Roboto', sans-serif;
   }
-});
-</script>
 
+  /* Barra base entre secciones */
+  #custom-navbar {
+    position: relative;
+    z-index: 1000;
+    transition: all 0.3s ease, background-color 0.3s ease;
+    background-color: rgba(255,255,255,1); /* inicial opacidad total */
+  }
 
+  /* Clase sticky al scrollear */
+  #custom-navbar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.9); /* opacidad al scrollear */
+  }
 
+  /* Logo oculto inicialmente */
+  .navbar-logo {
+    display: none;
+    align-items: center;
+  }
 
+  .navbar-logo img {
+    height: 40px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 
+  /* Cuando la barra es sticky, aparece */
+  #custom-navbar.sticky .navbar-logo {
+    display: flex;
+  }
 
+  #custom-navbar.sticky .navbar-logo img {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
+  /* Menu central */
+  .central-menu {
+    display: flex;
+    gap: 15px; /* más juntas */
+  }
+  .central-menu .nav-link {
+    text-align: center;
+    font-weight: 600;
+  }
 
-    
-    
-    <div class="container">
-        
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-12 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/3TQgTHTEfF4?rel=0&amp;amp;mute=1&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=3TQgTHTEfF4" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-                
-            </div>
-        </div>
-    </div>
+  /* Separación de Productos */
+  #custom-navbar .productos-link {
+    margin-right: 20px; /* más cerca del centro */
+    margin-left: 20px;  /* separada de margen */
+  }
+
+  /* Separación de ENG|ESP */
+  .lang-switch {
+    margin-left: 20px; /* más cerca del centro y margen */
+    margin-right: 20px;
+  }
+
+  /* Ajustes de la sección del slider */
+  #video04-l {
+    padding: 0;
+  }
+  </style>
+
+  <!-- Script sticky -->
+  <script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("custom-navbar");
+    const section = document.querySelector("#image03-k"); // Sección 1
+    const triggerPoint = section.offsetHeight; // cuando pasás la primera sección
+    if (window.scrollY > triggerPoint) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  });
+  </script>
+
+  <!-- SLIDER NUEVO DE MOBIRISE -->
+  <div class="carousel slide carousel-fade" id="v3ScbforcB" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
+      <ol class="carousel-indicators">
+          <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
+          <li data-slide-to="1" data-bs-slide-to="1" data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="carousel-item slider-image item active">
+              <div class="item-wrapper">
+                  <img class="d-block w-100" src="assets/images/1-foto-1-principal.jpeg" alt="Imagen 1">
+                  <div class="carousel-caption">
+                      <!-- Botón opcional, podés borrar esto si no querés CTA -->
+                      <!--
+                      <div class="mbr-section-btn mb-5">
+                          <a class="btn btn-primary display-7" href="#">Get started</a>
+                      </div>
+                      -->
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item slider-image item">
+              <div class="item-wrapper">
+                  <img class="d-block w-100" src="assets/images/2-foto-2-principal.jpeg" alt="Imagen 2">
+                  <div class="carousel-caption">
+                      <!-- Botón opcional -->
+                      <!--
+                      <div class="mbr-section-btn mb-5">
+                          <a class="btn btn-primary display-7" href="#">Get started</a>
+                      </div>
+                      -->
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#v3ScbforcB">
+          <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+          <span class="sr-only visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#v3ScbforcB">
+          <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+          <span class="sr-only visually-hidden">Next</span>
+      </a>
+  </div>
+
 </section>
+
 
 <section data-bs-version="5.1" class="article12 cid-uYce1KttkO" id="article12-4">    
     
