@@ -154,6 +154,23 @@
   #video04-l {
     padding: 0;
   }
+/* FORZAR SLIDER FULLSCREEN */
+#v3ScbforcB,
+#v3ScbforcB .carousel-inner,
+#v3ScbforcB .carousel-item,
+#v3ScbforcB .item-wrapper {
+    height: 100vh !important; /* altura de pantalla completa */
+}
+
+/* FORZAR QUE LAS IMÁGENES LLENEN TODA LA PANTALLA SIN DEFORMARSE */
+#v3ScbforcB .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* llena todo el fondo */
+    object-position: center; /* centra la imagen */
+}
+
+    
   </style>
 
   <!-- Script sticky -->
