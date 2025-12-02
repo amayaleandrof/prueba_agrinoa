@@ -78,34 +78,32 @@
     </div>
   </nav>
 
-  <!-- CSS -->
+  <!-- ESTILOS -->
   <style>
-  /* Fuente Roboto para navbar */
+  /* ===== NAVBAR ===== */
+
   #custom-navbar, 
   #custom-navbar .nav-link, 
   #custom-navbar .lang-link {
     font-family: 'Roboto', sans-serif;
   }
 
-  /* Barra base entre secciones */
   #custom-navbar {
     position: relative;
     z-index: 1000;
     transition: all 0.3s ease, background-color 0.3s ease;
-    background-color: rgba(255,255,255,1); /* inicial opacidad total */
+    background-color: rgba(255,255,255,1);
   }
 
-  /* Clase sticky al scrollear */
   #custom-navbar.sticky {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    background-color: rgba(255,255,255,0.9); /* opacidad al scrollear */
+    background-color: rgba(255,255,255,0.9);
   }
 
-  /* Logo oculto inicialmente */
   .navbar-logo {
     display: none;
     align-items: center;
@@ -118,7 +116,6 @@
     transform: translateY(-10px);
   }
 
-  /* Cuando la barra es sticky, aparece */
   #custom-navbar.sticky .navbar-logo {
     display: flex;
   }
@@ -128,78 +125,69 @@
     transform: translateY(0);
   }
 
-  /* Menu central */
   .central-menu {
     display: flex;
-    gap: 15px; /* más juntas */
+    gap: 15px;
   }
   .central-menu .nav-link {
     text-align: center;
     font-weight: 600;
   }
 
-  /* Separación de Productos */
   #custom-navbar .productos-link {
-    margin-right: 20px; /* más cerca del centro */
-    margin-left: 20px;  /* separada de margen */
+    margin-right: 20px;
+    margin-left: 20px;
   }
 
-  /* Separación de ENG|ESP */
   .lang-switch {
-    margin-left: 20px; /* más cerca del centro y margen */
+    margin-left: 20px;
     margin-right: 20px;
   }
 
-  /* Ajustes de la sección del slider */
+  /* ===== SLIDER FULLSCREEN ===== */
+
   #video04-l {
     padding: 0;
   }
-/* FORZAR SLIDER FULLSCREEN */
-#v3ScbforcB,
-#v3ScbforcB .carousel-inner,
-#v3ScbforcB .carousel-item,
-#v3ScbforcB .item-wrapper {
-    height: 100vh !important; /* altura de pantalla completa */
-}
 
-/* FORZAR QUE LAS IMÁGENES LLENEN TODA LA PANTALLA SIN DEFORMARSE */
-#v3ScbforcB .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* llena todo el fondo */
-    object-position: center; /* centra la imagen */
-}
+  /* eliminamos límites de ancho en esta sección por si hay containers */
+  #video04-l .container,
+  #video04-l .container-fluid,
+  #video04-l .row {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 
-    <style>
-/* ALTURA FULLSCREEN A LO BRUTO */
-#v3ScbforcB,
-#v3ScbforcB .carousel-inner,
-#v3ScbforcB .carousel-item,
-#v3ScbforcB .item-wrapper,
-#v3ScbforcB .carousel-item .item-wrapper {
+  /* el carrusel ocupa toda la ventana */
+  #v3ScbforcB,
+  #v3ScbforcB .carousel-inner,
+  #v3ScbforcB .carousel-item,
+  #v3ScbforcB .item-wrapper {
+    width: 100vw !important;
+    max-width: 100vw !important;
     height: 100vh !important;
     min-height: 100vh !important;
-}
+  }
 
-/* HACER QUE LAS IMÁGENES LLENEN TODO */
-#v3ScbforcB .carousel-item img {
-    height: 100vh !important;
+  /* la imagen llena todo, sin deformarse */
+  #v3ScbforcB .carousel-item img {
     width: 100vw !important;
+    height: 100vh !important;
     object-fit: cover !important;
-    object-position: center !important;
+    object-position: center center !important;
     display: block !important;
-}
-</style>
-
-    
+  }
   </style>
 
   <!-- Script sticky -->
   <script>
   window.addEventListener("scroll", function() {
     const navbar = document.getElementById("custom-navbar");
-    const section = document.querySelector("#image03-k"); // Sección 1
-    const triggerPoint = section.offsetHeight; // cuando pasás la primera sección
+    const section = document.querySelector("#image03-k");
+    const triggerPoint = section.offsetHeight;
     if (window.scrollY > triggerPoint) {
       navbar.classList.add("sticky");
     } else {
@@ -208,85 +196,48 @@
   });
   </script>
 
-  <!-- SLIDER NUEVO DE MOBIRISE -->
-  <div class="carousel slide carousel-fade" id="v3ScbforcB" data-ride="carousel" data-bs-ride="carousel" data-interval="5000" data-bs-interval="5000">
-      <ol class="carousel-indicators">
-          <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
-          <li data-slide-to="1" data-bs-slide-to="1" data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
-      </ol>
-      <div class="carousel-inner">
-          <div class="carousel-item slider-image item active">
-              <div class="item-wrapper">
-                  <img class="d-block w-100" src="assets/images/1-foto-1-principal.jpeg" alt="Imagen 1">
-                  <div class="carousel-caption">
-                      <!-- Botón opcional, podés borrar esto si no querés CTA -->
-                      <!--
-                      <div class="mbr-section-btn mb-5">
-                          <a class="btn btn-primary display-7" href="#">Get started</a>
-                      </div>
-                      -->
-                  </div>
-              </div>
-          </div>
-          <div class="carousel-item slider-image item">
-              <div class="item-wrapper">
-                  <img class="d-block w-100" src="assets/images/2-foto-2-principal.jpeg" alt="Imagen 2">
-                  <div class="carousel-caption">
-                      <!-- Botón opcional -->
-                      <!--
-                      <div class="mbr-section-btn mb-5">
-                          <a class="btn btn-primary display-7" href="#">Get started</a>
-                      </div>
-                      -->
-                  </div>
-              </div>
-          </div>
+  <!-- SLIDER -->
+  <div class="carousel slide carousel-fade" id="v3ScbforcB"
+       data-ride="carousel" data-bs-ride="carousel"
+       data-interval="5000" data-bs-interval="5000">
+    <ol class="carousel-indicators">
+      <li data-slide-to="0" data-bs-slide-to="0" class="active"
+          data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
+      <li data-slide-to="1" data-bs-slide-to="1"
+          data-target="#v3ScbforcB" data-bs-target="#v3ScbforcB"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item slider-image item active">
+        <div class="item-wrapper">
+          <img class="d-block w-100"
+               src="assets/images/1-foto-1-principal.jpeg"
+               alt="Imagen 1">
+        </div>
       </div>
-      <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" data-bs-slide="prev" href="#v3ScbforcB">
-          <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-          <span class="sr-only visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control carousel-control-next" role="button" data-slide="next" data-bs-slide="next" href="#v3ScbforcB">
-          <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-          <span class="sr-only visually-hidden">Next</span>
-      </a>
+      <div class="carousel-item slider-image item">
+        <div class="item-wrapper">
+          <img class="d-block w-100"
+               src="assets/images/2-foto-2-principal.jpeg"
+               alt="Imagen 2">
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control carousel-control-prev" role="button"
+       data-slide="prev" data-bs-slide="prev" href="#v3ScbforcB">
+      <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+      <span class="sr-only visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control carousel-control-next" role="button"
+       data-slide="next" data-bs-slide="next" href="#v3ScbforcB">
+      <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+      <span class="sr-only visually-hidden">Next</span>
+    </a>
   </div>
 
-<style>
-   /* todo tu CSS del navbar… */
-
-   /* --- PEGAR ACÁ, BIEN AL FINAL DEL STYLE --- */
-
-   #video04-l .container,
-   #video04-l .container-fluid,
-   #video04-l .row {
-       max-width: 100% !important;
-       padding-left: 0 !important;
-       padding-right: 0 !important;
-       margin-left: 0 !important;
-       margin-right: 0 !important;
-   }
-
-   #v3ScbforcB,
-   #v3ScbforcB .carousel-inner,
-   #v3ScbforcB .carousel-item,
-   #v3ScbforcB .item-wrapper {
-       width: 100vw !important;
-       max-width: 100vw !important;
-       height: 100vh !important;
-       min-height: 100vh !important;
-   }
-
-   #v3ScbforcB .carousel-item img {
-       width: 100vw !important;
-       height: 100vh !important;
-       object-fit: cover !important;
-       object-position: center center !important;
-   }
-</style>
-
-  
 </section>
+
 
 
 <section data-bs-version="5.1" class="article12 cid-uYce1KttkO" id="article12-4">    
