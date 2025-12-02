@@ -46,7 +46,7 @@
   </div>
 </section>
 
-<section data-bs-version="5.1" class="video04 cid-uZ3L9AXTvc" id="video04-l">
+<section data-bs-version="5.1" class="video04 slider3 cid-uZ3L9AXTvc" id="video04-l">
 
 <!-- Barra de menú entre secciones -->
 <nav id="custom-navbar" class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
@@ -68,95 +68,79 @@
       <li class="nav-item"><a class="nav-link fw-bold" href="#article12-b">Solvencia</a></li>
     </ul>
 
-    <!-- Idiomas a la derecha -->
+    <!-- Idiomas -->
     <div class="lang-switch d-flex align-items-center ms-4">
       <a href="#" class="lang-link">ENG</a>
       <span class="mx-1">|</span>
       <a href="#" class="lang-link">ESP</a>
     </div>
-    
   </div>
 </nav>
 
-<!-- CSS -->
+<!-- =======================
+     SLIDER NUEVO
+======================= -->
+
+<div class="carousel slide carousel-fade" id="v3ScbforcB" data-bs-ride="carousel" data-bs-interval="5000">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="assets/images/1-foto-1-principal.jpeg" class="d-block w-100 slider-full" alt="Imagen 1">
+    </div>
+
+    <div class="carousel-item">
+      <img src="assets/images/2-foto-2-principal.jpeg" class="d-block w-100 slider-full" alt="Imagen 2">
+    </div>
+
+  </div>
+
+  <a class="carousel-control-prev" href="#v3ScbforcB" role="button" data-bs-slide="prev">
+    <span class="mobi-mbri mobi-mbri-arrow-prev"></span>
+  </a>
+  <a class="carousel-control-next" href="#v3ScbforcB" role="button" data-bs-slide="next">
+    <span class="mobi-mbri mobi-mbri-arrow-next"></span>
+  </a>
+
+</div>
+
+</section>
+
 <style>
-/* Fuente Roboto para navbar */
-#custom-navbar, 
-#custom-navbar .nav-link, 
-#custom-navbar .lang-link {
-  font-family: 'Roboto', sans-serif;
+/* ======================
+   SLIDER FULLSCREEN
+====================== */
+#v3ScbforcB,
+#v3ScbforcB .carousel-inner,
+#v3ScbforcB .carousel-item,
+.slider-full {
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
-/* Barra base entre secciones */
-#custom-navbar {
-  position: relative;
-  z-index: 1000;
-  transition: all 0.3s ease, background-color 0.3s ease;
-  background-color: rgba(255,255,255,1); /* inicial opacidad total */
+.slider-full {
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block;
 }
 
-/* Clase sticky al scrollear */
-#custom-navbar.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  background-color: rgba(255,255,255,0.9); /* opacidad al scrollear */
-}
-
-/* Logo oculto inicialmente */
-.navbar-logo {
-  display: none;
-  align-items: center;
-}
-
-.navbar-logo img {
-  height: 40px;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-/* Cuando la barra es sticky, aparece */
-#custom-navbar.sticky .navbar-logo {
-  display: flex;
-}
-
-#custom-navbar.sticky .navbar-logo img {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Menu central */
-.central-menu {
-  display: flex;
-  gap: 15px; /* más juntas */
-}
-.central-menu .nav-link {
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Separación de Productos */
-#custom-navbar .productos-link {
-  margin-right: 20px; /* más cerca del centro */
-  margin-left: 20px;  /* separada de margen */
-}
-
-/* Separación de ENG|ESP */
-.lang-switch {
-  margin-left: 20px; /* más cerca del centro y margen */
-  margin-right: 20px;
+/* Quitar cualquier padding que meta Mobirise */
+#video04-l, 
+#video04-l .container, 
+#video04-l .container-fluid, 
+#video04-l .row {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
 }
 </style>
 
-<!-- Script sticky -->
 <script>
+// Script sticky navbar
 window.addEventListener("scroll", function() {
   const navbar = document.getElementById("custom-navbar");
-  const section = document.querySelector("#image03-k"); // Sección 1
-  const triggerPoint = section.offsetHeight; // cuando pasás la primera sección
+  const section = document.querySelector("#image03-k");
+  const triggerPoint = section.offsetHeight;
   if (window.scrollY > triggerPoint) {
     navbar.classList.add("sticky");
   } else {
@@ -165,25 +149,6 @@ window.addEventListener("scroll", function() {
 });
 </script>
 
-
-
-
-
-
-
-
-    
-    
-    <div class="container">
-        
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-12 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/3TQgTHTEfF4?rel=0&amp;amp;mute=1&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=3TQgTHTEfF4" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-                
-            </div>
-        </div>
-    </div>
-</section>
 
 <section data-bs-version="5.1" class="article12 cid-uYce1KttkO" id="article12-4">    
     
